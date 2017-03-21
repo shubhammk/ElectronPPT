@@ -1,0 +1,46 @@
+/*.reveal
+{
+  background-color: #36486b;
+}*/
+
+.reveal pre
+{
+  box-shadow: none;
+}
+
+.reveal section img
+{
+  border-width: 0px;
+  background: none;
+  box-shadow: none;
+}
+
+.reveal section img.social-media-icon
+{
+  width: 50px;
+  vertical-align: middle;
+}
+
+.reveal section img.social-media-icon.social-media-icon-small
+{
+  width: 25px;
+}
+
+span.social-media-handle
+{
+  font-size: 50px;
+  vertical-align: middle;
+}
+
+span.social-media-handle.social-media-handle-small
+{
+  font-size: 25px;
+}
+
+.reveal section .app-icons img
+{
+  width: 150px;
+  margin-top: 50px;
+  margin-right: 50px;
+  vertical-align: middle;
+}

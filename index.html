@@ -1,0 +1,253 @@
+<html>
+
+<head>
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/league.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/atom-one-dark.css">
+
+  <!-- Style overrides for this presentation -->
+  <link rel="stylesheet" href="css/presentation.css">
+  <title>Electron</title>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Electron</h1>
+        <div style="width: 20%; margin: auto">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.3 0.1 137.7 149.3">
+            <g fill="#47848F">
+              <path d="M48.8 32.2c-19.5-3.6-34.9.2-41.1 10.8-4.6 7.9-3.3 18.5 3.2 29.7.5 1 1.8 1.3 2.7.7 1-.5 1.3-1.8.7-2.7C8.5 60.6 7.4 51.5 11.1 45 16.2 36.2 30 32.8 48 36.1c1.1.2 2.1-.5 2.3-1.6s-.4-2.1-1.5-2.3zM21.1 86.4c7.9 8.7 18.1 16.8 29.8 23.5 28.3 16.3 58.4 20.7 73.3 10.6.9-.6 1.1-1.9.5-2.8-.6-.9-1.9-1.1-2.8-.5-13.3 9.1-41.9 4.9-69-10.7C41.6 100 31.6 92.1 24 83.7c-.7-.8-2-.9-2.8-.1-.8.7-.9 2-.1 2.8z"
+              />
+              <path d="M119.4 84c12.8-15.1 17.2-30.3 11.1-40.9-4.5-7.8-14.1-11.9-26.7-12.1-1.1 0-2 .9-2 2s.9 2 2 2c11.4.1 19.6 3.7 23.3 10.1 5.1 8.8 1.1 22.4-10.7 36.3-.7.8-.6 2.1.2 2.8.8.7 2.1.6 2.8-.2zM86.6 32.8C75.1 35.3 62.8 40.1 51 46.9 21.7 63.8 2.7 88.7 5.3 106.7c.2 1.1 1.2 1.8 2.3 1.7 1.1-.2 1.8-1.2 1.7-2.3C6.9 90.1 25 66.6 53 50.4c11.5-6.6 23.4-11.3 34.5-13.7 1.1-.2 1.8-1.3 1.5-2.4-.3-1-1.3-1.7-2.4-1.5z"
+              />
+              <path d="M39.3 119.2c6.7 18.6 17.6 30.1 29.9 30.1 9 0 17.2-6.1 23.7-16.9.6-.9.3-2.2-.7-2.7-.9-.6-2.2-.3-2.7.7-5.8 9.7-12.9 14.9-20.3 14.9-10.2 0-19.9-10.2-26.1-27.5-.4-1-1.5-1.6-2.6-1.2-1.1.4-1.6 1.6-1.2 2.6zm61-3.6c3.5-11 5.3-23.8 5.3-37.1 0-33.1-11.6-61.7-28.1-69-1-.4-2.2 0-2.6 1-.4 1 0 2.2 1 2.6 14.7 6.5 25.7 33.6 25.7 65.4 0 12.9-1.8 25.2-5.1 35.9-.3 1.1.3 2.2 1.3 2.5 1 .3 2.1-.3 2.5-1.3zm37.6-2c0-5.3-4.3-9.6-9.6-9.6s-9.6 4.3-9.6 9.6 4.3 9.6 9.6 9.6c5.4 0 9.6-4.3 9.6-9.6zm-4 0c0 3.1-2.5 5.6-5.6 5.6-3.1 0-5.6-2.5-5.6-5.6s2.5-5.6 5.6-5.6c3.1 0 5.6 2.5 5.6 5.6zM9.8 123.2c5.3 0 9.6-4.3 9.6-9.6s-4.3-9.6-9.6-9.6-9.6 4.3-9.6 9.6 4.3 9.6 9.6 9.6zm0-4c-3.1 0-5.6-2.5-5.6-5.6s2.5-5.6 5.6-5.6 5.6 2.5 5.6 5.6-2.5 5.6-5.6 5.6z"
+              />
+              <path d="M69.2 19.2c5.3 0 9.6-4.3 9.6-9.6S74.5 0 69.2 0s-9.6 4.3-9.6 9.6 4.3 9.6 9.6 9.6zm0-4c-3.1 0-5.6-2.5-5.6-5.6S66.1 4 69.2 4c3.1 0 5.6 2.5 5.6 5.6s-2.6 5.6-5.6 5.6zm1.4 70.1c-3.7.8-7.4-1.6-8.2-5.3-.8-3.7 1.6-7.4 5.3-8.2 3.7-.8 7.4 1.6 8.2 5.3.8 3.7-1.5 7.4-5.3 8.2z"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/shubham-kabra-1369703a/">
+            <img src="img/linkedin-logo.png" class="social-media-icon" />
+          </a>
+          <a href="http://www.github.com/shubhammk">
+            <img src="img/GitHub-Mark-Light-120px-plus.png" class="social-media-icon" />
+          </a>
+          <span class="social-media-handle">shubhammk</span>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>If you use</h2>
+        <div class="app-icons">
+          <img src="img/vscode.png" class="fragment" />
+          <img src="img/atom-mac.png" class="fragment" />
+          <img src="img/slack.png" class="fragment" />
+          <img src="img/wordpress-com-icon.png" class="fragment" />
+        </div>
+      </section>
+
+      <section>
+        <h2>You've used</h2>
+        <img src="img/electron-banner.svg" />
+      </section>
+
+      <section>
+        <h2>What is Electron?</h2>
+        <div class="app-icons">
+          <img src="img/octocat.png" />
+          <img src="img/atom.png" />
+        </div>
+      </section>
+
+      <section>
+        <h2>History</h2>
+        <ul>
+          <li>
+            Created by Github for Atom
+          </li>
+          <li>
+            Formerly Atom Shell
+          </li>
+          <li>
+            Active since January 2013
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Why desktop apps?</h2>
+        <div class="app-icons">
+          <img src="img/windows.png" />
+          <img src="img/osx.png" />
+          <img src="img/linux.png" />
+        </div>
+      </section>
+
+      <section>
+        <h2>Why Electron?</h2>
+        <div class="app-icons">
+          <img src="img/chromium.png" class="fragment" />
+          <img src="img/nodejs-white.png" class="fragment" />
+          <img src="img/npm.png" class="fragment" />
+        </div>
+      </section>
+
+      <section>
+        <h2>which means...</h2>
+        <ul>
+          <li class="fragment">HTML + CSS + JavaScript</li>
+          <li class="fragment">Advantages of NodeJS + Chrome</li>
+          <li class="fragment">No deployment/platform dependencies</li>
+          <span class="fragment">AND</span>
+          <li class="fragment">Rapid Development</li>
+          <li class="fragment">Themes</li>
+          <li class="fragment">Shared Code/UI</li>
+          <li class="fragment">Deployment and "silent" updates</li>
+          <li class="fragment">Native UX</li>
+        </ul>
+      </section>
+
+      <section>
+        <img src="img/yeah.gif" style="width: 100%; height: 80%" />
+      </section>
+
+      <section>
+        <h2>Anatomy of an Electron app</h2>
+        <img src="img/anatomy.png" style="width: 100%; height: 80%" />
+      </section>
+
+      <section>
+        <h2>Anatomy (continued...)</h2>
+        <ol>
+          <li>
+            package.json
+          </li>
+          <li>
+            index.js (Main Process)
+          </li>
+          <li>
+            index.html (Renderer Process)
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>package.json</h2>
+        <pre>
+                    <code class="json" data-trim>
+{
+  "name": "electron-bare-bones",
+  "version": "0.1.0",
+  "main": "index.js"
+}
+                    </code>
+                  </pre>
+      </section>
+
+      <section>
+        <h2>index.js (Main Process)</h2>
+        <pre>
+                    <code class="javascript" data-trim>
+const electron = require('electron')
+
+let win // global ref so window is not closed with JS is garbage collected
+
+electron.app.on('ready', () => {
+  win = new electron.BrowserWindow({ width: 800, height: 600 })
+  win.loadURL(`file://${__dirname}/index.html`)
+})
+                    </code>
+                  </pre>
+      </section>
+
+      <section>
+        <h2>index.html (Renderer Process)</h2>
+        <pre>
+                    <code class="html" data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Electron Bare Bones App&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+
+    &lt;script&gt;
+      alert('Hi!')
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+                    </code>
+                  </pre>
+      </section>
+
+      <section>
+        <h2>Demo</h2>
+      </section>
+
+      <section>
+        <h2>Learn More</h2>
+        <ul>
+          <li>
+            Electron website (docs and tutorials):
+            <a href="http://electron.atom.io/">electron.atom.io</a>
+          </li>
+          <li>
+            Some really cool apps:
+            <a href="https://github.com/sindresorhus/awesome-electron">https://github.com/sindresorhus/awesome-electron</a>
+          </li>
+          <!--<li>
+                      This talk (and code):
+                      <a href="https://github.com/shubhammk/electron-lightning-talk">
+                        github.com/shubhammk/electron-lightning-talk
+                      </a>
+                    </li>-->
+        </ul>
+
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/shubham-kabra-1369703a/">
+            <img src="img/linkedin-logo.png" class="social-media-icon social-media-icon-small" />
+          </a>
+          <a href="http://www.github.com/shubhammk">
+            <img src="img/GitHub-Mark-Light-120px-plus.png" class="social-media-icon social-media-icon-small" />
+          </a>
+          <span class="social-media-handle social-media-handle-small">shubhammk</span>
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+  <!-- Script loader for dependencies -->
+  <script src="lib/js/head.min.js"></script>
+
+  <script src="js/reveal.js"></script>
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+      transitionSpeed: 'slow',
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }]
+    });
+  </script>
+</body>
+
+</html>
